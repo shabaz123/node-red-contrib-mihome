@@ -1,0 +1,30 @@
+{
+  "name": "node-red-contrib-mihome",
+  "version": "0.0.1",
+  "description": "Node for Energenie MiHome control via API or Radio",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shabaz <shabaz123@gmail.com>",
+  "node-red": {
+    "nodes": {
+      "mihome": "mihome.js"
+    }
+  },
+  "keywords": [
+    "mihome"
+  ],
+  "license": "ISC",
+  "dependencies": {
+  },
+  "main": "mihome.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabaz123/node-red-contrib-mihome.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shabaz123/node-red-contrib-mihome/issues"
+  },
+  "homepage": "https://github.com/shabaz123/node-red-contrib-mihome"
+}

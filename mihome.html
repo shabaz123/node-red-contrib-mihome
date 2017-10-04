@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    RED.nodes.registerType('mihome', {
+        category: 'function',
+        color: '#FFDD57',
+        defaults: {
+            name: {value: ""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: 'inject.png',
+        label: function () {
+            return this.name || 'mihome';
+        }
+    });
+
+</script>
+
+<script type="text/x-red" data-template-name="mihome">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" class="paletteLabel" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="mihome">
+   <p>Energenie MiHome control via API or Radio</p>
+</script>
