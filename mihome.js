@@ -30,17 +30,18 @@ function getApiKey(email, pw, cb) {
                           'auth': email+':'+pw
                          },
         function(response) {
+          var allresp="";
           //console.log('status: '+response.statusCode);
           //console.log('headers: '+JSON.stringify(response.headers));
           response.setEncoding('utf8');
           response.on('data', function(chunk) {
-            //console.log('body is: '+chunk);
-            bodyparse=JSON.parse(chunk);
-            console.log('API key is: '+bodyparse.data.api_key);
-            cb(bodyparse.data.api_key);
+            allresp+=chunk;
           });
           response.on('end', function() {
-            //console.log('end');
+            //console.log('body is: '+allresp);
+            bodyparse=JSON.parse(allresp);
+            console.log('API key is: '+bodyparse.data.api_key);
+            cb(bodyparse.data.api_key);
           });
         });
   request.end();
