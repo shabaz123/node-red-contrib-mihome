@@ -14,3 +14,4 @@ Run in the ~/.node-red folder:
 
 	npm install node-red-contrib-mihome
 	
+See the links above for more details.
